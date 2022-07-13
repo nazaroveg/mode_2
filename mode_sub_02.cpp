@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-
+#define SUB(a, b)(a-b)   // a-b-c * c 6-5-2  -1*2 =-2    (-4?)
 
 
 int main()
@@ -12,17 +12,11 @@ int main()
 	int b = 5;
 	int c = 2;
 
-   #define SUB(a, b) (a-b)
+  
 	std::cout << SUB(a, b) << std::endl;
-   #undef SUB
-
-    #define SUB(a, b, c) ((a - b) * c)     //a-b = 1 * 2 = 2  (4?)
-	std::cout << SUB(a, b, c) * c << std::endl;
-   #undef SUB
-
-    #define SUB(a, b, c) (((a)-(b)-(c)) *(c))      // a-b-c * c 6-5-2  -1*2 =-2    (-4?)
-	std::cout << SUB(a, b, c ) * c << std::endl; 
-   #undef SUB
+	std::cout << SUB(a, b) * c << std::endl;
+	std::cout << SUB(a, b + c) * c << std::endl;
+  
 		
 		return 0;
 }

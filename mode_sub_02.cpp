@@ -3,7 +3,7 @@
 #include <iostream>
 
 
-#define SUB(a, b)(a-b)   // a-b-c * c 6-5-2  -1*2 =-2    (-4?)
+#define SUB(a, b)((a)-(b))   // a-b-c * c 6-5-2  -1*2 =-2    (-4?)
 
 
 int main()
